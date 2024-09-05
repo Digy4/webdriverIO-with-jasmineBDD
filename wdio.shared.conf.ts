@@ -1,7 +1,33 @@
 import url  from 'node:url'
 import path from 'node:path'
+import { DigyRunnerService } from '@digy4/digyrunner-wdio/DigyRunnerService';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
+
+const digyRunnerConfig = {
+    lob: "digydashboard",
+    application: "checkout",
+    release: "release",
+    projectName: "WdioJasmine",
+    suiteName: "Regression",
+    teamName: "Digy4",
+    appVersion: "2.0",
+    environment: "test",
+    moduleName: "SomeModuleName",
+    tester: "Joe Bloggs",
+    ba: "Joe Bloggs",
+    developer: "Joe Bloggs",
+    region: "us-east-2",
+    protocol: 'https',
+    strictSSL: false,
+    port: 443,
+    resultsSummaryUrl: 'https://3qsmhuqr59.execute-api.us-east-1.amazonaws.com/digy4-test/v3/resultsSummary',
+    logsUploadBaseUrl: 'https://3qsmhuqr59.execute-api.us-east-1.amazonaws.com/digy4-test/getPresignedUrl',
+    projectPlanUrl: 'https://z85m9oisq5.execute-api.us-east-1.amazonaws.com/test/users/project-plan-details',
+    clientId: 'f1527f7888d133118fb59646bf06d13e:9b93f9ce24709c05e6b89d4b1dcc20db',
+    clientSecret: '0f65851f18521ee7b0ef6216a1f9a1d7:d6bba3e5c7d3bc31e5e0c9b144d59ef7',
+};
+
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -136,6 +162,11 @@ export const config: WebdriverIO.Config = {
       // }],
 
     ],
+
+    services: [
+        [new DigyRunnerService(digyRunnerConfig)],
+    ],
+
     //
     // Options to be passed to Jasmine.
     jasmineOpts: {
