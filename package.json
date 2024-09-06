@@ -26,13 +26,13 @@
   },
   "scripts": {
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
-    "allure-report":  "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open -p 5050",
-    "xunit-report":   "node_modules/.bin/xunit-viewer --server -p=3000 -t='Automation Test Report' --results=./test/reports/junit-results --output=./xunit-report/xunit-report.html",
-    "test-sauce":     "wdio wdio.sauce.conf.ts",
+    "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open -p 5050",
+    "xunit-report": "node_modules/.bin/xunit-viewer --server -p=3000 -t='Automation Test Report' --results=./test/reports/junit-results --output=./xunit-report/xunit-report.html",
+    "test-sauce": "wdio wdio.sauce.conf.ts",
     "test-browserstack": "wdio wdio.browserstack.conf.ts",
-    "test-lambdatest":    "wdio wdio.lambdatest.conf.ts",
-    "test-local":         "wdio  wdio.local.conf.ts",
-    "test-mobile":        "wdio wdio.appium.conf.ts"
+    "test-lambdatest": "wdio wdio.lambdatest.conf.ts",
+    "test-local": "wdio  wdio.local.conf.ts",
+    "test-mobile": "wdio wdio.appium.conf.ts"
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^8.40.1",
@@ -59,8 +59,9 @@
     "xunit-viewer": "^7.2.0"
   },
   "dependencies": {
-    "@digy4/digyrunner-wdio": "^0.0.47",
+    "@digy4/digyrunner-wdio": "^0.0.52",
     "@wdio/codemod": "^0.12.0",
-    "jscodeshift": "^0.14.0"
+    "jscodeshift": "^0.14.0",
+    "wdio-video-reporter": "^6.0.0"
   }
 }
