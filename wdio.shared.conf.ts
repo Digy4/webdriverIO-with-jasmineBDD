@@ -1,5 +1,6 @@
 import url  from 'node:url'
 import path from 'node:path'
+import video from 'wdio-video-reporter'
 import { DigyRunnerService } from '@digy4/digyrunner-wdio/DigyRunnerService';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
@@ -150,6 +151,12 @@ export const config: WebdriverIO.Config = {
           disableWebdriverScreenshotsReporting: true,
       }],
 
+      [video, {
+          saveAllVideos: true,       // If true, also saves videos for successful test cases
+          videoSlowdownMultiplier: 5, // Higher to get slower videos, lower for faster videos [Value 1-100]
+          videoFormat: 'mp4'
+      }],
+        
       // ['json', {
       //   outputDir: './test/reports/json-results'
       //   }],
