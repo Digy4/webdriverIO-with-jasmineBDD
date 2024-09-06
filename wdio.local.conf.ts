@@ -8,7 +8,12 @@ export const config: WebdriverIO.Config = {
             browserName: 'chrome',
             'wdio:devtoolsOptions': {
                 headless: false
-            }
+            },
+            "goog:loggingPrefs": {
+                'driver': 'INFO',
+                'browser': 'DEBUG',
+                'performance': 'INFO'
+            },
         }]
     }
 }
