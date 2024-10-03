@@ -171,7 +171,9 @@ export const config: WebdriverIO.Config = {
     ],
 
     services: [
-        [new DigyRunnerService(digyRunnerConfig)],
+        [DigyRunnerService, {
+            digyRunnerConfig: digyRunnerConfig
+        }],
     ],
 
     //
