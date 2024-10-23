@@ -9,13 +9,13 @@ const digyRunnerConfig = {
     lob: "digydashboard",
     application: "checkout",
     release: "release",
-    projectName: "WdioJasmine",
+    projectName: "WDIOCUCUMBER",
     suiteName: "Regression",
     teamName: "Digy4",
     appVersion: "2.0",
     environment: "test",
     moduleName: "SomeModuleName",
-    tester: "Joe Bloggs",
+    tester: "Lander Vitug",
     ba: "Joe Bloggs",
     developer: "Joe Bloggs",
     region: "us-east-2",
@@ -25,8 +25,8 @@ const digyRunnerConfig = {
     resultsSummaryUrl: 'https://3qsmhuqr59.execute-api.us-east-1.amazonaws.com/digy4-test/v3/resultsSummary',
     logsUploadBaseUrl: 'https://3qsmhuqr59.execute-api.us-east-1.amazonaws.com/digy4-test/getPresignedUrl',
     projectPlanUrl: 'https://z85m9oisq5.execute-api.us-east-1.amazonaws.com/test/users/project-plan-details',
-    clientId: 'f1527f7888d133118fb59646bf06d13e:9b93f9ce24709c05e6b89d4b1dcc20db',
-    clientSecret: '0f65851f18521ee7b0ef6216a1f9a1d7:d6bba3e5c7d3bc31e5e0c9b144d59ef7',
+    clientId: '172747a12be8c543ed9d1cc82ceaa01a:691249e00b587580ad4b0910cf33a813',
+    clientSecret: '712bd067d76d346e80a7ec9248bc0f9f:501b108656880dc91e328c76a640368d',
 };
 
 export const config: WebdriverIO.Config = {
@@ -37,7 +37,13 @@ export const config: WebdriverIO.Config = {
     //
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
+
     runner: 'local',
+    hostname: 'frank.feat.dev.digy4.com',
+    port: 443,
+    path: '/wd/hub',
+    protocol: 'https',
+
     //
     // ==================
     // Specify Test Files
@@ -70,7 +76,20 @@ export const config: WebdriverIO.Config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 20,
+
+    capabilities: [{
+        browserName: 'chrome',
+        'wdio:devtoolsOptions': {
+            headless: false
+        },
+        "goog:loggingPrefs": {
+            'driver': 'INFO',
+            'browser': 'DEBUG',
+            'performance': 'INFO'
+        },
+    }],
+
     //
     // ===================
     // Test Configurations
