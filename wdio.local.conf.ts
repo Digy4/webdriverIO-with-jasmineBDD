@@ -6,9 +6,14 @@ export const config: WebdriverIO.Config = {
     ...{
         capabilities: [{
             browserName: 'chrome',
-            'wdio:devtoolsOptions': {
-                headless: false
-            },
+            maxInstances: 20,
+            'goog:chromeOptions': {
+                args: [
+                  '--disable-gpu',
+                  '--no-sandbox',
+                  '--disable-dev-shm-usage',
+                ],
+              },
             "goog:loggingPrefs": {
                 'driver': 'INFO',
                 'browser': 'DEBUG',
