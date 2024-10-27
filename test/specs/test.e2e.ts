@@ -3,7 +3,7 @@ import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
 describe('main suite 16', () => {
-    afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
+    //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     describe('context management16', () => {
         it('should allow user to switch between contexts', async () => {

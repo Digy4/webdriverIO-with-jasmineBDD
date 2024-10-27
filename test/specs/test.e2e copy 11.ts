@@ -3,7 +3,7 @@ import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
 describe('main suite 13', () => {
-    afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
+    //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     describe('emulate clock', () => {
         const now = new Date(2021, 3, 14)

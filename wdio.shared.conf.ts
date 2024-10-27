@@ -8,13 +8,13 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const digyRunnerConfig = {
     lob: "AUTOMATION",
     application: "Jasmine",
-    release: "digykubev1",
-    projectName: "WDIOCUCUMBER",
+    release: "digykubev2",
+    projectName: "JASMINE",
     suiteName: "DIGYRUNNER",
-    teamName: "DIGYCLOUD",
-    appVersion: "0.0.58-alpha.8",
+    teamName: "KTtoSubrata",
+    appVersion: "0.0.59",
     environment: "production",
-    moduleName: "DigyKubeWDIOJ",
+    moduleName: "WDIOJ",
     tester: "Ragavan",
     ba: "Joe Bloggs",
     developer: "Ragavan",
@@ -71,7 +71,7 @@ export const config: WebdriverIO.Config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 20,
+    maxInstances: 18,
     //
     // ===================
     // Test Configurations

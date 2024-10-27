@@ -3,7 +3,7 @@ import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
 describe('main suite 11', () => {
-    afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
+    //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     describe('shadow root piercing', () => {
         it('recognises new shadow root ids when page refreshes', async () => {

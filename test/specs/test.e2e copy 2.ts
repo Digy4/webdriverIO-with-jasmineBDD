@@ -3,7 +3,7 @@ import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
 describe('main suite 3', () => {
-    afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
+   //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     it('should also detect non PWAs 3', async () => {
         await browser.url('https://json.org')

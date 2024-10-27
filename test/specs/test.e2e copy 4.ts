@@ -3,7 +3,7 @@ import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
 describe('main suite 5', () => {
-    afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
+    //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     describe('Lighthouse Service Performance Testing capabilities 5', () => {
         before(() => browser.enablePerformanceAudits())

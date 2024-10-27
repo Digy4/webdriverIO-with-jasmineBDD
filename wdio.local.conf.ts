@@ -6,7 +6,7 @@ export const config: WebdriverIO.Config = {
     ...{
         capabilities: [{
             browserName: 'chrome',
-            maxInstances: 20,
+            maxInstances: 18,
             'goog:chromeOptions': {
                 args: [
                   '--disable-gpu',
@@ -16,7 +16,7 @@ export const config: WebdriverIO.Config = {
               },
             "goog:loggingPrefs": {
                 'driver': 'INFO',
-                'browser': 'DEBUG',
+                'browser': 'INFO',
                 'performance': 'INFO'
             },
         }]
