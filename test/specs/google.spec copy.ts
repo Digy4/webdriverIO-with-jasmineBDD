@@ -1,6 +1,6 @@
 import GooglePage from '../pageobjects/google.page.ts';
 
-describe('demo test google', () => {
+describe('demo test google100', () => {
     it('should open google and type `wdio`', () => {
         GooglePage.open();
     });

@@ -7,14 +7,14 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 const digyRunnerConfig = {
     lob: "AUTOMATION",
-    application: "Jasmine",
-    release: "digykubev2",
+    application: "Chrome",
+    release: "digykubev3",
     projectName: "JASMINE",
     suiteName: "DIGYRUNNER",
-    teamName: "KTtoSubrata",
+    teamName: "digy4team",
     appVersion: "0.0.59",
     environment: "production",
-    moduleName: "WDIOJ",
+    moduleName: "WDIOJDK",
     tester: "Ragavan",
     ba: "Joe Bloggs",
     developer: "Ragavan",
@@ -34,7 +34,7 @@ export const config: WebdriverIO.Config = {
     // on a remote machine).
     //digykube
 
-    hostname: 'frank.feat.dev.digy4.com',
+    hostname: 'frank1.feat.dev.digy4.com',
     port: 443,
     path: '/wd/hub',
     protocol: 'https',
@@ -114,7 +114,7 @@ export const config: WebdriverIO.Config = {
     connectionRetryTimeout: 90000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 1,
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

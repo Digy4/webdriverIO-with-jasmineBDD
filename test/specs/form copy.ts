@@ -1,8 +1,8 @@
 import FormPage from '../pageobjects/form.page.js'
 
-describe('auth form2', () => {
+describe('auth form9', () => {
 
-    it('should allow access with correct creds2', async () => {
+    it('should allow access with correct creds9', async () => {
         await FormPage.open()
         await FormPage.username.setValue('tomsmith')
         await FormPage.password.setValue('SuperSecretPassword!')

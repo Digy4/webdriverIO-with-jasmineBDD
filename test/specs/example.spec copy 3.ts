@@ -1,7 +1,7 @@
 //example.spec.ts
 import ExampleClass from '../pageobjects/example.page.ts'
-describe('Google Search', () => {
-  it('should search for sepcified text',async() => {
+describe('Google Search11', () => {
+  it('should search for sepcified text1',async() => {
     await browser.url('https://www.google.com');
     await (await ExampleClass.searchInput).setValue("Webdriver IO Search Example");
     await browser.keys('Enter')

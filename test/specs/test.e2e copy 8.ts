@@ -2,7 +2,7 @@
 import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
-describe('main suite 12', () => {
+describe('main suite 22', () => {
     //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     it('supports snapshot testing 8', async () => {

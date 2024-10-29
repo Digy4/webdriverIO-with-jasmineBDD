@@ -1,6 +1,6 @@
 //example.spec.ts
 import ExampleClass from '../pageobjects/example.page.ts'
-describe('Google Search', () => {
+describe('Google Search2', () => {
   it('should search for sepcified text',async() => {
     
     await browser.url('https://www.google.com');

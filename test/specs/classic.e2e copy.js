@@ -1,7 +1,7 @@
 import { browser } from '@wdio/globals'
 import scripts from './__fixtures__/script.js'
 
-describe('__name polyfill 2', () => {
+describe('__name polyfill 299', () => {
     it('suppports __name polyfill for classic sessions 2', async () => {
         await browser.url('http://guinea-pig.webdriver.io')
         expect(await browser.execute(scripts.someScript, 'foo')).toBe('Hello World! foo')

@@ -5,7 +5,7 @@ import assert       from 'assert';
 	This is a BDD test using Mocha JavaScript framework
 */
 
-describe('Performing a search operation on Yahoo Page',  () =>  {
+describe('Performing a search operation on Yahoo Page2',  () =>  {
   it('Performing a search operation', async () =>  {
     await yahooPage.open();
     assert.equal(await browser.getTitle(), 'Yahoo Search - Web Search');

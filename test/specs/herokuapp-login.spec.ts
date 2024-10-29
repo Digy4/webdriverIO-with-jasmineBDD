@@ -9,7 +9,7 @@ import { Status } from "allure-js-commons";
 	This is a BDD test using Mocha JavaScript framework
 */
 
-describe('Test for herokuapp login page',  () =>  {
+describe('Test for herokuapp login page33',  () =>  {
   it('should allow user to login ', async () =>  {
     assert.fail.status=
     await loginPage.open();     // navigating to login page
@@ -27,7 +27,7 @@ it("Test Authentication", async () => {
   } catch {
     assert.equal("differnt text2", "FAIL Welcome to the Secure Area. When you are done click logout below.");
   }
-  endStep(Status.BROKEN);
+    endStep(Status.BROKEN);
   });
 
   it('should fail to validate the message after login ', async () =>  {

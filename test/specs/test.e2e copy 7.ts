@@ -2,7 +2,7 @@
 import { browser, $, expect } from '@wdio/globals'
 import os from 'node:os'
 
-describe('main suite 6', () => {
+describe('main suite 66', () => {
     //afterEach(() => browser.setViewport({ width: 1200, height: 900 }))
 
     describe('context management', () => {
