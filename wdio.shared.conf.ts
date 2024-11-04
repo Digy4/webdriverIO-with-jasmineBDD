@@ -34,7 +34,7 @@ export const config: WebdriverIO.Config = {
     // on a remote machine).
     //digykube
 
-    hostname: 'frank1.feat.dev.digy4.com',
+    hostname: 'frank2.feat.dev.digy4.com',
     port: 443,
     path: '/wd/hub',
     protocol: 'https',
