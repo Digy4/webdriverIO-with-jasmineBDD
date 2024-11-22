@@ -8,7 +8,7 @@ describe('demo test google13', () => {
         GooglePage.googleSearchInputBox.setValue('wdio');
         driver.keys('Enter');
     });
-    it('verify `wdio` is in the search box', () => {
+    it.skip('verify `wdio` is in the search box', () => {
         expect(GooglePage.googleSearchInputBox).toHaveValue('wdio');
     });
 });

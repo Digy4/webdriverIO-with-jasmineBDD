@@ -1,5 +1,5 @@
 import { browser } from '@wdio/globals'
-import scripts from './__fixtures__/script.js'
+import scripts from '../__fixtures__/script.ts'
 
 describe('__name polyfill 4', () => {
     it('suppports __name polyfill for classic sessions 3', async () => {
