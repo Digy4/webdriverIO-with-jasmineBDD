@@ -6,7 +6,7 @@ export const config: WebdriverIO.Config = {
     ...{
         capabilities: [{
             browserName: 'chrome',
-            maxInstances: 18,
+            maxInstances: 30,
             'goog:chromeOptions': {
                 args: [
                   '--disable-gpu',

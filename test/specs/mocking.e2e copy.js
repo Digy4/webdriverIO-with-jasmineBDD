@@ -1,7 +1,7 @@
 import { browser, expect } from '@wdio/globals'
 
 describe('network mocking22', () => {
-    xit('marks a request as mocked even without overwrites2', async () => {
+    it('marks a request as mocked even without overwrites2', async () => {
         const baseUrl = 'http://guinea-pig.webdriver.io/'
         const mock = await browser.mock(`${baseUrl}components/hammerjs/hammer.js`, {
             method: 'get',

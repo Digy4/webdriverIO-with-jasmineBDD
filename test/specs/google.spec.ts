@@ -8,7 +8,7 @@ describe('demo test google200', () => {
         GooglePage.googleSearchInputBox.setValue('wdio');
         driver.keys('Enter');
     });
-    xit('verify `wdio` is in the search box', () => {
+    it('verify `wdio` is in the search box', () => {
         expect(GooglePage.googleSearchInputBox).toHaveValue('wdio');
     });
 });

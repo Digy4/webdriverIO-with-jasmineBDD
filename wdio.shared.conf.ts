@@ -7,22 +7,23 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 const digyRunnerConfig = {
     lob: "AUTOMATION",
-    application: "Chrome",
-    release: "digykubev3",
-    projectName: "JASMINE",
-    suiteName: "DIGYRUNNER",
-    teamName: "digy4team",
-    appVersion: "0.0.59",
-    environment: "production",
-    moduleName: "WDIOJDK",
+    application: "automation",
+    release: "Release100SCALEHIGH",
+    projectName: "RECONFIX",
+    suiteName: "jasmine2",
+    teamName: "DIGY4TEAM",
+    appVersion: "0.0.61-alpha.2",
+    environment: "stage",
+    moduleName: "WDIOJM",
     tester: "Ragavan",
     ba: "Joe Bloggs",
     developer: "Ragavan",
-    resultsSummaryUrl: 'https://3qsmhuqr59.execute-api.us-east-1.amazonaws.com/digy4-test/v3/resultsSummary',
-    logsUploadBaseUrl: 'https://3qsmhuqr59.execute-api.us-east-1.amazonaws.com/digy4-test/getPresignedUrl',
-    projectPlanUrl: 'https://z85m9oisq5.execute-api.us-east-1.amazonaws.com/test/users/project-plan-details',
-    clientId: "172747a12be8c543ed9d1cc82ceaa01a:691249e00b587580ad4b0910cf33a813",
-    clientSecret: "712bd067d76d346e80a7ec9248bc0f9f:501b108656880dc91e328c76a640368d",
+    resultsSummaryUrl: 'https://ms5aqg9psk.execute-api.us-west-2.amazonaws.com/digy4-prod/v3/resultsSummary',
+    logsUploadBaseUrl: 'https://ms5aqg9psk.execute-api.us-west-2.amazonaws.com/digy4-prod/getPresignedUrl',
+    projectPlanUrl: 'https://u7dd3kq498.execute-api.us-west-2.amazonaws.com/prod/users/project-plan-details',
+    clientId: "77f8727dac0338d61fdb3a31b9cab0ee:ac14de0d0ea580af2fd3b6c55f5886b6",
+    clientSecret: "4f7071b6ee602bab4474c8e61f848c26:1de5119221a669d3356a73904187e6f7",
+
 };
 export const config: WebdriverIO.Config = {
     //
@@ -34,7 +35,7 @@ export const config: WebdriverIO.Config = {
     // on a remote machine).
     //digykube
 
-    hostname: 'frank2.feat.dev.digy4.com',
+    hostname: 'digykube.feat.dev.digy4.com',
     port: 443,
     path: '/wd/hub',
     protocol: 'https',
@@ -49,6 +50,7 @@ export const config: WebdriverIO.Config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
+        './test/specs/*.js',
         './test/specs/*.ts'
     ],
     // Patterns to exclude.
@@ -71,7 +73,7 @@ export const config: WebdriverIO.Config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 18,
+    maxInstances: 30,
     //
     // ===================
     // Test Configurations
